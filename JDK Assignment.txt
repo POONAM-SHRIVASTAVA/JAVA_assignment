@@ -1,0 +1,46 @@
+
+1) Explain the components of the JDK.
+ ANS- JDK is a java plateform software devlopment kit it is use to devlop java application. 
+JDK = java tools + java docs +jRE
+
+2) Differentiate between JDK, JVM, and JRE.
+Ans -  JDK = java tools + java docs +jRE
+        JRE = java API (java class library)(rt.jar file) + Java virtual Machine (JVM)
+        JVM = Classloader + Bytecode + JIT (Just in Time)
+
+3) What is the role of the JVM in Java? & How does the JVM execute Java code?
+
+JVM role ->To Loads code & Verifies code & Executes code & Provides runtime environment. It is called a virtual machine because it doesn't physically exist. It is a specification that provides a runtime environment in which Java bytecode can be executed
+
+4) Explain the memory management system of the JVM.
+
+5) What are the JIT compiler and its role in the JVM? What is the bytecode and why is it important for Java?
+When Java program are executed ,JVM does not interpret entire code into machine instruction.JVM intrepret only the piece of the code that is required to execute & untouch the rest code.
+java compiler is responsible for generating butecode.Bytecode is object oriented assembly language which can be understand by JVM which is inside .class file
+
+6) Describe the architecture of the JVM.
+JVM contains classloader, memory area, execution engine
+
+a) Classloader -> Classloader is a subsystem of JVM which is used to load class files. Whenever we run the java program, it is loaded first by the classloader. There are three built-in classloaders in Java.
+
+Bootstrap ClassLoader , Extension ClassLoader ,System/Application ClassLoader
+
+b) Class(Method) Area ->Class(Method) Area stores per-class structures such as the runtime constant pool, field and method data, the code for methods.
+
+c) Heap ->It is the runtime data area in which objects are allocated.
+
+d) Stack ->Java Stack stores frames. It holds local variables and partial results, and plays a part in method invocation and return.
+
+e) Program Counter Register -> PC (program counter) register contains the address of the Java virtual machine instruction currently being executed.
+
+f) Native Method Stack ->It contains all the native methods used in the application
+
+7) How does Java achieve platform independence through the JVM?
+After compile java generate bytecode which is architecture neutral ,so it can run on any CPU so it is architecture neutral
+
+8) What is the significance of the class loader in Java? What is the process of garbage collection in Java.
+Classloader -> Classloader is a subsystem of JVM which is used to load class files. Whenever we run the java program, it is loaded first by the classloader. There are three built-in classloaders in Java.
+
+Bootstrap ClassLoader , Extension ClassLoader ,System/Application ClassLoader
+
+Java garbage collection is an automatic process. Automatic garbage collection is the process of looking at heap memory, identifying which objects are in use and which are not, and deleting the unused objects. An in-use object, or a referenced object, means that some part of your program still maintains a pointer to that object. An unused or unreferenced object is no longer referenced by any part of your program. So the memory used by an unreferenced object can be reclaimed. The programmer does not need to mark objects to be deleted explicitly. The garbage collection implementation lives in the JVM. 
